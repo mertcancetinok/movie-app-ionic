@@ -1,0 +1,11 @@
+.movie-subtitle{
+display: flex;
+justify-content: space-between;
+margin-top: 10px;
+}
+
+img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}

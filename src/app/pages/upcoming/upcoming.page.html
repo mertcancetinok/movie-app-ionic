@@ -6,10 +6,8 @@
 
 <ion-content  #content
 [scrollEvents]="true">
-  <ion-searchbar [(ngModel)]="filterText" (ionChange)="search()"></ion-searchbar>
-  <ion-card *ngFor="let movie of movies" id="{{movie.id}}" (click)="getDetails($event)">
-    <ion-card-header>
-      
+  <ion-card *ngFor="let movie of movies" >
+    <ion-card-header> 
       <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"/>
       <div class="movie-subtitle">
         <ion-card-subtitle>Language:{{ movie.original_language }}</ion-card-subtitle>
@@ -27,6 +25,7 @@
     </ion-card-header>
   
     <ion-card-content>
+      
       {{ movie.overview}}
     </ion-card-content>
   </ion-card>

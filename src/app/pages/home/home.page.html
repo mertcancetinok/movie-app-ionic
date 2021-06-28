@@ -1,6 +1,6 @@
 <ion-content #content
   [scrollEvents]="true">
-  <ion-card *ngFor="let movie of movies" style="margin-top: 100px;" >
+  <ion-card *ngFor="let movie of movies" style="margin-top: 100px;" id="{{movie.id}}" (click)="getDetails($event)">
     <ion-card-header>
       
       <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"/>

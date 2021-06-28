@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>movie-details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card style="margin-top: 20px;">
+    <ion-card-header>
+      
+      <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"/>
+      <ion-card-title style="margin-top: 15px;">
+        {{ movie.original_title }} 's details
+      </ion-card-title>
+      <div class="movie-subtitle">
+        <ion-card-subtitle>Language:{{ movie.original_language }}</ion-card-subtitle>
+        <ion-card-subtitle>IMDB Rate:{{movie.vote_average}}</ion-card-subtitle>
+      </div> 
+      <div class="movie-subtitle" style="margin-top: 5px;">
+        <ion-card-subtitle>Release Date:{{movie.release_date | date }}</ion-card-subtitle>
+        <ion-card-subtitle>Popularity:{{movie.popularity}}</ion-card-subtitle>
+      </div>
+      <div class="card-loop" style="margin-top: 15px;">
+        <ion-card-subtitle>Categories:</ion-card-subtitle>
+        <span style="margin-right: 5px;" *ngFor="let genre of movie.genres">{{genre.name}}</span>
+      </div>
+      <div class="card-loop" style="margin-top: 15px;">
+        <ion-card-subtitle>Production Countries:</ion-card-subtitle>
+        <span style="margin-right: 5px;" *ngFor="let production_country of movie.production_countries">{{production_country.name}}</span>
+      </div>
+      <div class="card-loop" style="margin-top: 15px;">
+        <ion-card-subtitle>Production Companies:</ion-card-subtitle>
+        <span style="margin-right: 5px;" *ngFor="let production_company of movie.production_companies">{{production_company.name}}-
+          {{production_company.origin_country}} <div></div></span>
+      </div>
+      <ion-card-subtitle style="margin-top: 15px;">Run Time:{{movie.runtime}} minute</ion-card-subtitle>
+      <div class="card-loop" style="margin-top: 15px;">
+        <ion-card-subtitle>Spoken Languages:</ion-card-subtitle>
+        <span style="margin-right: 5px;" *ngFor="let spoken_language of movie.spoken_languages">{{spoken_language.english_name}}</span>
+      </div>
+      <ion-card-title style="margin-top: 15px;">
+        {{ movie.original_title }}
+      </ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      
+      {{ movie.overview}}
+      <br><a href="{{movie.homepage}}" target="_blank">Visit the movie website</a>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

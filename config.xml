@@ -5,6 +5,8 @@
     <author email="cetinokmertcan@gmail.com" href="#">Mert Can Çetinok</author>
     <content src="index.html" />
     <access origin="*" />
+    <allow-navigation href="*" />
+    <allow-intent href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />

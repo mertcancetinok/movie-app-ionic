@@ -15,7 +15,15 @@ const routes: Routes = [
   {
     path: 'search',
     loadChildren: () => import('./pages/search/search.module').then( m => m.SearchPageModule)
+  },  {
+    path: 'upcoming',
+    loadChildren: () => import('./pages/upcoming/upcoming.module').then( m => m.UpcomingPageModule)
   },
+  {
+    path: 'movie-details',
+    loadChildren: () => import('./pages/movie-details/movie-details.module').then( m => m.MovieDetailsPageModule)
+  },
+
 ];
 
 @NgModule({
